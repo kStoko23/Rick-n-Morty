@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick'n'Morty</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <img class="title-img" src="images/title.png" alt="Rick and Morty" />
+      <img class="characters-1" src="images/rickmorty2.png" alt="Rick" />
+      <img class="characters-2" src="images/rickmorty.png" alt="Rick" />
+      <img class="characters-3" src="images/rick2.png" alt="Rick" />
+      <img class="characters-4" src="images/rick3.png" alt="Rick" />
+      <div class="m-4 w-50 mx-auto">
+        <div class="mb-3">
+          <label for="status-filter" class="form-label"
+            >Filter by Status:</label
+          >
+          <select id="status-filter" class="form-control">
+            <option value="all">All</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <div class="table-container">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="character-table-body"></tbody>
+          </table>
+        </div>
+
+        <nav class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a
+                class="page-link"
+                href="#"
+                id="prev-page"
+                aria-label="Previous"
+              >
+                <i class="arrow prev"></i
+                ><span aria-hidden="true">Previous</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" id="next-page" aria-label="Next">
+                <span aria-hidden="true">Next</span> <i class="arrow next"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
