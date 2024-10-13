@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Data fetched:", data);
         displayCharacters(data.results);
         updatePagination(data.info);
+
+        const tableContainer = document.querySelector(".table-container");
+        tableContainer.scrollTop = 0;
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
