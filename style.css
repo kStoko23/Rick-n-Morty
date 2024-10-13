@@ -13,15 +13,21 @@ body {
   margin-right: auto;
 }
 
-.characters-1 {
+.characters-1,
+.characters-2,
+.characters-3,
+.characters-4 {
   position: absolute;
+  z-index: 0;
+}
+
+.characters-1 {
   max-width: 400px;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 .characters-2 {
-  position: absolute;
   max-width: 300px;
   bottom: 0;
   right: 0;
@@ -29,7 +35,6 @@ body {
   z-index: 1;
 }
 .characters-3 {
-  position: absolute;
   max-width: 250px;
   top: 0;
   left: -2%;
@@ -37,7 +42,6 @@ body {
   z-index: 1;
 }
 .characters-4 {
-  position: absolute;
   max-width: 250px;
   top: 0;
   right: -2%;
@@ -45,6 +49,13 @@ body {
   z-index: 1;
 }
 
+.table-container,
+nav,
+#status-filter,
+.title-img {
+  position: relative;
+  z-index: 111;
+}
 .table-container {
   max-height: 500px;
   overflow-y: auto;
@@ -54,7 +65,6 @@ body {
 
 .table {
   width: 100%;
-  border-collapse: collapse;
 }
 
 .table thead th {
@@ -137,4 +147,26 @@ body {
 #status-filter:focus {
   outline: none;
   box-shadow: none;
+}
+@media (max-width: 768px) {
+  .title-img {
+    width: 100%;
+  }
+
+  .characters-1,
+  .characters-2 {
+    max-width: 150px;
+    bottom: 10%;
+  }
+
+  .characters-3,
+  .characters-4 {
+    display: none;
+  }
+
+  .wrapper {
+    min-width: 80%;
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
